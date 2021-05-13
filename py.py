@@ -16,7 +16,7 @@ def basic_sigmoid(x):
     s= 1/(1+np.exp(-x))
     ### END CODE HERE ###
     
-    return 1
+    return s
 
 
 print(basic_sigmoid(3))

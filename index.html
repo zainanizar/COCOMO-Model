@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./css/animate.min.css" />
     <link rel="stylesheet" href="./css/ionicons.min.css" />
     <link rel="stylesheet" href="./css/styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.2.0/chart.min.js" integrity="sha512-VMsZqo0ar06BMtg0tPsdgRADvl0kDHpTbugCBBrL55KmucH6hP9zWdLIWY//OTfMnzz6xWQRxQqsUFefwHuHyg==" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -389,39 +390,21 @@
                                 <input id='externalsAverage' type='number' min='1' class='form-control copier' placeholder='Number Of Average'>
                                 <input id='externalsComplex' type='number' min='1' class='form-control copier' placeholder='Number Of Complex'>
 
-                                <br><br><br> For the upcoming values enter from 0-10 values for each one:
-                                <div class="ComplexityFactors">
-                                    <input type='number' min='1' class='form-control copier' placeholder='Data Communication'>
-                                    <input type='number' min='1' class='form-control copier' placeholder='Distributed Data Processing'>
-                                    <input type='number' min='1' class='form-control copier' placeholder='Performed Criteria'>
-                                    <input type='number' min='1' class='form-control copier' placeholder='Heavily Utlized Hardware'>
-                                    <input type='number' min='1' class='form-control copier' placeholder='High Transaction Rates'>
-                                    <input type='number' min='1' class='form-control copier' placeholder='Online Data Entry'>
-                                    <input type='number' min='1' class='form-control copier' placeholder='Online Updating'>
-                                    <input type='number' min='1' class='form-control copier' placeholder='End User Efficieny'>
-                                    <input type='number' min='1' class='form-control copier' placeholder='Complex Computations'>
-                                    <input type='number' min='1' class='form-control copier' placeholder='Reusibility'>
-                                    <input type='number' min='1' class='form-control copier' placeholder='Ease of Installation'>
-                                    <input type='number' min='1' class='form-control copier' placeholder='Ease of operation'>
-                                    <input type='number' min='1' class='form-control copier' placeholder='Portability'>
-                                </div>
+                                <br><br>
+
+                                <button onclick='FunctionPointCalculation()' id='FPBtn' type='button' class='btn btn-primary btn-block btn-md'>Calculate Function Point Model</button>
+
+                                <p class="FP"></p>
+                                <canvas id="myChart" width="400" height="150"></canvas>
+
+
                             </div>
+                            <br><br>
 
-                            <button onclick='FunctionPointCalculation()' id='FPBtn' type='button' class='btn btn-primary btn-block btn-md'>Calculate Function Point Model</button>
-
-                            <p class="FP"></p>
-
-
-                        </div>
-                        <br><br>
-                        <div class="col-md-4 col-md-offset-4">
-                            <label></label>
-                            <button onclick="Calculate()" disabled="true" id="calculate" type="button" data-toggle="modal" data-target="#alertModal" class="btn btn-primary btn-block btn-lg">Operate the Model <i class="ion-android-arrow-forward"></i></button>
-                        </div>
                     </form>
+                    </div>
                 </div>
             </div>
-        </div>
     </section>
     <div id="galleryModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog modal-lg">
